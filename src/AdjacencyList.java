@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 
 public class AdjacencyList {
+    int StartVertex=0;
 
     private ArrayList<Vertex> vertices;
 
@@ -21,6 +22,17 @@ public class AdjacencyList {
         Edge newEdge = new Edge(from,to,dist);
 
     }
+
+    public MSTPrims(AdjacencyList,vertices,StartVertex){
+
+        int[] Distance =new int[vertices];
+        int[] predecessor = new int[vertices];
+        boolean[] visited =  new boolean[];
+        for (int i = 0; i<vertices.size();i++){
+            visited[i]=false;
+        }
+    }
+
     public void printGraph(){
         Vertex currentv;
         for (int i = 0; i < vertices.size(); i++) {
@@ -65,7 +77,7 @@ class Vertex implements Comparable<Vertex> {
     private String Name;
     private ArrayList<Edge> outEdges;
     Integer distance = Integer.MAX_VALUE;
-
+    Vertex prev = null;
     public Vertex(String ID) {
         this.Name = ID;               //constructor
         outEdges = new ArrayList<>();
@@ -119,6 +131,7 @@ class Edge {
         toVertex = to;
         weight = Cost;
         from.addOutEdge(this);
+
     }
 
 }

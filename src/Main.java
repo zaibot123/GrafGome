@@ -1,7 +1,12 @@
 public class Main {
 
     public static void main(String[] args) {
+
+        System.out.println("________________________");
+
                 MatrixGraph thisGraph = new MatrixGraph(7);
+        System.out.println("________________________");
+
                 thisGraph.addEdge(0, 1, 1);
                 thisGraph.addEdge(0, 2, 5);
                 thisGraph.addEdge(0, 4, 3);
